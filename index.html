@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070d19">
+  <meta name="description" content="Abandoned, Not Forgotten: a cinematic educational journey through the machines humanity left on the Moon and Mars.">
+  <title>Abandoned, Not Forgotten | NASA Space Apps 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#intro-story">Skip to story</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="starfield" aria-hidden="true"></div>
+
+  <div class="gate" id="gate">
+    <div class="gate-orbit" aria-hidden="true"><div class="gate-planet"></div></div>
+    <p class="eyebrow">NASA SPACE APPS CHALLENGE / 2026</p>
+    <h1>ABANDONED<span class="punctuation">.</span><br><em>NOT FORGOTTEN.</em></h1>
+    <p class="gate-copy">Their missions ended. Their discoveries live on.<br>Journey to the machines still resting on the Moon and Mars.</p>
+    <button id="begin" class="button button-primary" type="button">BEGIN THE JOURNEY <span aria-hidden="true">↗</span></button>
+    <button id="skip" class="text-button" type="button">Skip intro and explore ↓</button>
+  </div>
+
+  <header class="nav" id="site-nav">
+    <a class="brand" href="#top" aria-label="Abandoned Not Forgotten home">A<span class="accent">/</span>NF <small>SPACE ARCHIVE</small></a>
+    <nav aria-label="Main navigation">
+      <a href="#where">THE ATLAS</a>
+      <a href="#missions">THE MACHINES</a>
+      <a href="#future">THE FUTURE</a>
+      <a href="#quiz">QUIZ</a>
+    </nav>
+    <span class="nav-status"><span class="pulse"></span> EARTH / MOON / MARS</span>
+  </header>
+
+  <main id="top">
+    <section id="intro-story" class="hero section-screen">
+      <div class="planet planet-earth" aria-hidden="true"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <p class="eyebrow overline">FIELD NOTES FROM OTHER WORLDS // 001</p>
+        <h2>WE WENT<br><span class="outline">FURTHER.</span><br>WE LEFT<br>THINGS <span class="accent">BEHIND.</span></h2>
+        <p>What happens to a machine after its last mission? Some become silent monuments. Others continue to shape science long after their operators go home.</p>
+        <a class="round-link" href="#where">SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="coordinates" aria-hidden="true">51° 29′ N <span>↗</span> 0° 00′ E / DEPARTURE: EARTH</div>
+    </section>
+
+    <section class="chapter-intro container section-pad" id="legacy">
+      <p class="eyebrow">01 / THE LEGACY</p>
+      <h2 class="display reveal">EXPLORATION LEAVES <span class="muted">FOOTPRINTS.</span></h2>
+      <div class="split-copy">
+        <p class="lead reveal">Since 1958, NASA has sent spacecraft and scientific instruments into the unknown. Some never came back—and that was sometimes part of the plan.</p>
+        <p class="reveal">Inactive satellites, Apollo vehicles, scientific stations, parachutes and landing hardware tell stories about the engineering breakthroughs that made exploration possible. But they also raise questions about planetary protection, safety and future reuse.</p>
+      </div>
+    </section>
+
+    <section class="atlas section-pad" id="where">
+      <div class="container">
+        <p class="eyebrow">02 / WHERE WE LEFT THEM</p>
+        <h2 class="display reveal">A SOLAR SYSTEM<br>OF <span class="accent">ARTIFACTS.</span></h2>
+        <p class="section-lead">Not everything left in space is the same. Some objects are hazardous debris. Others are important historical or scientific sites.</p>
+        <div class="atlas-grid">
+          <article class="place-card reveal"><span class="place-num">01 / EARTH ORBIT</span><div class="orb orb-earth"></div><h3>IN ORBIT</h3><p>Inactive satellites, discarded rocket stages and fragments from collisions.</p><span class="place-note">Example: Vanguard 1</span></article>
+          <article class="place-card reveal"><span class="place-num">02 / LUNAR SURFACE</span><div class="orb orb-moon"></div><h3>THE MOON</h3><p>Apollo rovers, lander descent stages, tools and instruments left at landing sites.</p><span class="place-note">Explore: LRV and ALSEP</span></article>
+          <article class="place-card reveal"><span class="place-num">03 / MARTIAN SURFACE</span><div class="orb orb-mars"></div><h3>MARS</h3><p>Discarded parachutes, heat shields, backshells and descent stages lie near the previous rover landing areas.</p><span class="place-note">Explore: Perseverance EDL</span></article>
+          <article class="place-card reveal"><span class="place-num">04 / DEEP SPACE</span><div class="orb orb-deep"></div><h3>BEYOND</h3><p>Spacecraft and spent hardware traveling far from Earth, sometimes still sending data.</p><span class="place-note">Not all are abandoned</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact section-pad" id="impact">
+      <div class="container">
+        <p class="eyebrow">03 / THE BIG QUESTION</p>
+        <h2 class="display reveal">WHY SHOULD<br><span class="outline">WE CARE?</span></h2>
+        <div class="impact-grid">
+          <article class="impact-item"><span>01</span><h3>PLANETARY PROTECTION</h3><p>Spacecraft materials—and possible contamination from Earth—can complicate the study of other worlds.</p></article>
+          <article class="impact-item"><span>02</span><h3>FUTURE SAFETY</h3><p>Debris or discarded components could matter for landing-site planning and future missions.</p></article>
+          <article class="impact-item"><span>03</span><h3>LOST RESOURCES</h3><p>Materials are difficult to recover when they are exposed to extreme temperatures, radiation and vast distances.</p></article>
+          <article class="impact-item"><span>04</span><h3>SCIENTIFIC HERITAGE</h3><p>Not every object should be removed. Historical landing sites and instruments may deserve protection.</p></article>
+        </div>
+        <div class="pull-quote reveal">“Should we remove everything we leave behind—or learn which things are worth preserving?”</div>
+      </div>
+    </section>
+
+    <section class="missions section-pad" id="missions">
+      <div class="container"><p class="eyebrow">04 / THREE STORIES, THREE LEGACIES</p><h2 class="display reveal">MEET THE<br><span class="accent">SILENT EXPLORERS.</span></h2><p class="section-lead">Real equipment. Real scientific contributions. Select a mission to explore its story.</p></div>
+      <div class="container mission-tabs" role="tablist" aria-label="Choose a mission">
+        <button class="mission-tab active" role="tab" aria-selected="true" aria-controls="mission-content" data-mission="rover">01 / LUNAR ROVER</button>
+        <button class="mission-tab" role="tab" aria-selected="false" aria-controls="mission-content" data-mission="alsep">02 / ALSEP</button>
+        <button class="mission-tab" role="tab" aria-selected="false" aria-controls="mission-content" data-mission="parachute">03 / MARS LANDING GEAR</button>
+      </div>
+      <div class="container mission-layout" id="mission-content" role="tabpanel" aria-live="polite">
+        <figure class="mission-photo"><img id="mission-image" src="images/lunar-rover.jpg" alt="Apollo lunar roving vehicle on the Moon" loading="lazy"><figcaption id="mission-credit">NASA / Apollo lunar surface photography · <a id="mission-image-source" href="https://science.nasa.gov/resource/apollo-17-gene-cernan-in-lunar-roving-vehicle/" target="_blank" rel="noopener noreferrer">Image source ↗</a></figcaption></figure>
+        <div class="mission-copy"><span class="eyebrow" id="mission-label">MOON / APOLLO 15–17 / 1971–1972</span><h3 id="mission-title">THE MOON BUGGY.</h3><p class="mission-teaser" id="mission-teaser">Three electric rovers carried astronauts much farther than walking alone could take them.</p><div class="mission-stat"><strong id="mission-stat">~35 KM</strong><span id="mission-stat-caption">distance driven during Apollo 17</span></div><div class="mission-details" id="mission-details"><p><strong>What was it?</strong> A lightweight, foldable four-wheeled electric vehicle.</p><p><strong>Why was it needed?</strong> To carry astronauts, tools and lunar samples across distant geological sites.</p><p><strong>What remains?</strong> The three rovers stayed at their landing sites after the astronauts returned to Earth.</p></div><a id="mission-source" class="source-link" href="https://science.nasa.gov/resource/apollo-17-gene-cernan-in-lunar-roving-vehicle/" target="_blank" rel="noopener noreferrer">READ THE NASA MISSION SOURCE ↗</a></div>
+      </div>
+    </section>
+
+    <section class="photo-archive section-pad" id="photos"><div class="container"><p class="eyebrow">FIELD ARCHIVE / ORIGINAL MISSION PHOTOGRAPHS</p><h2 class="display reveal">THE EVIDENCE<br><span class="accent">REMAINS.</span></h2><p class="section-lead">Explore NASA’s original mission photography and the extraordinary hardware left on other worlds.</p><div class="archive-grid"><a class="archive-card" href="https://science.nasa.gov/resource/apollo-17-gene-cernan-in-lunar-roving-vehicle/" target="_blank" rel="noopener noreferrer"><img src="images/lunar-rover.jpg" loading="lazy" alt="Apollo lunar rover and astronaut"><span>01 / APOLLO 17 LUNAR ROVER <b>NASA PHOTO ↗</b></span></a><a class="archive-card" href="https://science.nasa.gov/resource/apollo-12-experiments-in-progress/" target="_blank" rel="noopener noreferrer"><img src="images/alsep.jpg" loading="lazy" alt="Apollo experiment deployment"><span>02 / ALSEP EXPERIMENTS <b>NASA PHOTO ↗</b></span></a><a class="archive-card" href="https://science.nasa.gov/photojournal/rovers-backshell-seen-from-the-air/" target="_blank" rel="noopener noreferrer"><img src="https://images-assets.nasa.gov/image/PIA25219/PIA25219~orig.jpg" loading="lazy" alt="Perseverance landing debris photographed from the air"><span>03 / PERSEVERANCE BACKSHELL <b>NASA PHOTO ↗</b></span></a></div><p class="archive-note">Photograph credits: NASA / NASA-JPL-Caltech. If an image is unavailable, click its NASA photo source to view or download the original.</p></div></section>
+
+    <section class="fact-banner section-pad"><div class="container fact-layout"><div><p class="eyebrow">A DIFFERENT APOLLO LEGACY</p><h2 class="display">3.8 <span class="accent">CM</span></h2><p class="lead">The Moon moves away from Earth by roughly this much each year.</p></div><p>Scientists measure the Earth–Moon distance using laser ranging experiments, including reflectors left by Apollo astronauts. <strong>This discovery is not credited to the lunar rover itself.</strong> <a href="https://science.nasa.gov/moon/facts/" target="_blank" rel="noopener noreferrer">NASA Moon facts ↗</a></p></div></section>
+
+    <section class="challenges section-pad"><div class="container"><p class="eyebrow">05 / THE RECYCLING PROBLEM</p><h2 class="display reveal">WHY NOT JUST<br><span class="outline">BRING IT BACK?</span></h2><div class="challenge-grid"><article><span>01 / ENVIRONMENT</span><h3>BRUTAL CONDITIONS</h3><p>Extreme temperatures, dust and radiation can damage equipment and make handling difficult.</p></article><article><span>02 / LOGISTICS</span><h3>ENORMOUS DISTANCES</h3><p>Retrieval would require launch mass, landing systems, energy and transport capabilities.</p></article><article><span>03 / ENGINEERING</span><h3>COMPLEX MATERIALS</h3><p>Specialized alloys, electronics and composites are hard to separate or repurpose safely.</p></article></div><div class="note-box"><strong>Important distinction:</strong> NASA's 2024 orbital-debris cost–benefit research concerns objects in <em>Earth orbit</em>. Its dollar estimates should not be presented as the cost of collecting equipment on Mars or the Moon. <a href="https://www.nasa.gov/wp-content/uploads/2024/05/2024-otps-cba-of-orbital-debris-phase-2-plus-svgs-v3-tjc-tagged.pdf" target="_blank" rel="noopener noreferrer">Read the NASA analysis ↗</a></div></div></section>
+
+    <section class="future section-pad" id="future"><div class="container"><p class="eyebrow">06 / WHAT COMES NEXT</p><h2 class="display reveal">FROM LEFT BEHIND<br>TO <span class="accent">LOOKING AHEAD.</span></h2><div class="timeline"><article class="timeline-step reveal"><span class="timeline-number">01</span><div><span class="eyebrow">NOW / DOCUMENT & PROTECT</span><h3>BUILD A SPACE WASTE ATLAS.</h3><p>Catalog known objects and their original missions. Use NASA imagery to document them, then decide what to preserve, monitor or investigate.</p></div></article><article class="timeline-step reveal"><span class="timeline-number">02</span><div><span class="eyebrow">NEXT / INSPECT & REUSE</span><h3>SEND ROBOTIC INSPECTORS.</h3><p>Imagine specialized robots that could examine equipment, test whether parts can be reused and selectively manage problematic debris.</p></div></article><article class="timeline-step reveal"><span class="timeline-number">03</span><div><span class="eyebrow">FUTURE / RECYCLE & BUILD</span><h3>MAKE NEW THINGS, THERE.</h3><p>Research local manufacturing and material recovery so future explorers can rely less on supplies launched from Earth.</p></div></article></div><p class="future-disclaimer">These ideas are a proposed roadmap, not an announced NASA cleanup program.</p></div></section>
+
+    <section class="quiz-section section-pad" id="quiz"><div class="container quiz-layout"><div><p class="eyebrow">07 / CHECK YOUR KNOWLEDGE</p><h2 class="display">WHAT DID<br><span class="accent">YOU DISCOVER?</span></h2><p>Three quick questions. Can you identify the forgotten machines—and why they matter?</p></div><div class="quiz-card"><div class="quiz-meta"><span id="quiz-count">QUESTION 01 / 03</span><span id="quiz-score">SCORE 0</span></div><h3 id="quiz-question">Which Apollo equipment recorded moonquakes?</h3><div id="quiz-answers" class="quiz-answers"><button type="button">Lunar rover</button><button type="button">ALSEP seismic instruments</button><button type="button">Perseverance parachute</button></div><p id="quiz-feedback" role="status"></p><button id="quiz-next" class="button button-primary" type="button" hidden>NEXT QUESTION →</button></div></div></section>
+
+    <section class="outro section-screen"><div class="container"><p class="eyebrow">END OF TRANSMISSION // THE STORY CONTINUES</p><h2 class="display reveal">THEY ARE STILL<br><span class="outline">OUT THERE.</span></h2><p>Every machine tells a story of ambition, discovery and responsibility. The next generation gets to decide what we leave behind.</p><a class="button button-primary" href="#missions">REVISIT THE MISSIONS ↗</a></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-layout"><div><strong>ABANDONED / NOT FORGOTTEN</strong><p>Educational prototype for NASA Space Apps Challenge 2026. Independent project; not an official NASA website.</p></div><div><span>RESEARCH / IMAGE CREDITS</span><a href="https://science.nasa.gov/resource/apollo-17-gene-cernan-in-lunar-roving-vehicle/" target="_blank" rel="noopener noreferrer">NASA Apollo 17 imagery ↗</a><a href="https://www.nasa.gov/wp-content/uploads/static/history/alsj/HamishALSEP.html" target="_blank" rel="noopener noreferrer">NASA ALSEP history ↗</a><a href="https://science.nasa.gov/photojournal/rovers-backshell-seen-from-the-air/" target="_blank" rel="noopener noreferrer">NASA Perseverance wreckage ↗</a><a href="https://www.nasa.gov/wp-content/uploads/2024/05/2024-otps-cba-of-orbital-debris-phase-2-plus-svgs-v3-tjc-tagged.pdf" target="_blank" rel="noopener noreferrer">NASA orbital-debris study ↗</a></div></div><div class="footer-bottom">SOURCE-BASED STORYTELLING / BUILT WITH HTML, CSS & JAVASCRIPT <span>© 2026</span></div></footer>
+</body>
+</html>
