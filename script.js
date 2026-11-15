@@ -1,15 +1,8 @@
 'use strict';
 
-// This site works without GSAP.
-// Motion is progressive enhancement.
-
 const reducedMotion = window.matchMedia(
   '(prefers-reduced-motion: reduce)'
 ).matches;
-
-// ========================================
-// 1. OPENING SCREEN
-// ========================================
 
 const gate = document.getElementById('gate');
 const begin = document.getElementById('begin');
@@ -38,16 +31,9 @@ function enterExperience() {
 begin.addEventListener('click', enterExperience);
 skip.addEventListener('click', enterExperience);
 
-// Allow repeat visitors to enter without
-// being stuck behind the overlay.
-
 if (sessionStorage.getItem('spaceJourneyEntered') === 'yes') {
   gate.hidden = true;
 }
-
-// ========================================
-// 2. MISSION INFORMATION
-// ========================================
 
 const missions = {
   rover: {
@@ -194,10 +180,6 @@ const missions = {
   }
 };
 
-// ========================================
-// 3. MISSION TABS AND IMAGE HANDLING
-// ========================================
-
 const tabs = [
   ...document.querySelectorAll('.mission-tab')
 ];
@@ -207,8 +189,6 @@ const missionImage = document.getElementById(
 );
 
 missionImage.addEventListener('error', function () {
-  // Keep the photo area legible if NASA
-  // changes an image endpoint.
 
   this.style.opacity = '.22';
 
@@ -317,10 +297,6 @@ tabs.forEach((tab, index) => {
   });
 });
 
-// ========================================
-// 4. QUIZ QUESTIONS
-// ========================================
-
 const questions = [
   {
     question:
@@ -371,10 +347,6 @@ const questions = [
   }
 ];
 
-// ========================================
-// 5. QUIZ STATE AND ELEMENTS
-// ========================================
-
 let quizIndex = 0;
 let score = 0;
 let answered = false;
@@ -402,10 +374,6 @@ const qFeedback = document.getElementById(
 const qNext = document.getElementById(
   'quiz-next'
 );
-
-// ========================================
-// 6. DISPLAY QUIZ QUESTION
-// ========================================
 
 function showQuestion() {
   answered = false;
@@ -469,11 +437,6 @@ function showQuestion() {
     qAnswers.append(btn);
   });
 }
-
-// ========================================
-// 7. NEXT QUESTION AND RESULTS
-// ========================================
-
 qNext.addEventListener('click', () => {
   if (quizIndex < questions.length - 1) {
     quizIndex++;
@@ -510,10 +473,6 @@ qNext.addEventListener('click', () => {
 
 showQuestion();
 
-// ========================================
-// 8. PAGE SCROLL PROGRESS
-// ========================================
-
 function updateProgress() {
   const total =
     document.documentElement.scrollHeight -
@@ -537,18 +496,12 @@ window.addEventListener(
 
 updateProgress();
 
-// ========================================
-// 9. OPTIONAL GSAP ANIMATIONS
-// ========================================
-
 if (
   window.gsap &&
   window.ScrollTrigger &&
   !reducedMotion
 ) {
   gsap.registerPlugin(ScrollTrigger);
-
-  // Reveal text and content as it enters view.
 
   gsap.utils.toArray('.reveal').forEach(el => {
     gsap.from(el, {
@@ -565,8 +518,6 @@ if (
     });
   });
 
-  // Earth movement and zoom while scrolling.
-
   gsap.to('.planet-earth', {
     yPercent: 18,
     scale: 1.12,
@@ -579,9 +530,6 @@ if (
       scrub: true
     }
   });
-
-  // Recalculate animation positions after
-  // images and other page assets finish loading.
 
   window.addEventListener('load', () => {
     ScrollTrigger.refresh();
